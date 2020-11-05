@@ -1,4 +1,4 @@
-# docker
+# docker/linux
 
 **pull cuda cudnn tensorflow ready to use image:**
 
