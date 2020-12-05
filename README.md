@@ -6,7 +6,7 @@ docker pull nvcr.io/nvidia/tensorflow:19.02-py3
 
 **create container with cetain GPU and portforwarding to be able to connect to a jupter notebook for exmaple:**
 
-`docker run -it --shm-size=1g --ulimit memlock=-1 --gpus device=1 --name -p 1234:1234 containername imagename`
+`docker run -it --shm-size=1g --ulimit memlock=-1 --gpus device=1 -p 1234:1234 --name containername imagename`
 
 **restart container to run it permanently:**
 
