@@ -1,5 +1,9 @@
 # docker/linux
 
+**use standard kernel of env for jupyter notebook**
+
+`python3 -m ipykernel install --user`
+
 **look for running processes on GPU**
 
 `nvidia-smi`
@@ -14,7 +18,9 @@
 
 **end all jupyter notebooks if no permission to shut down regularly**
 
- https://stackoverflow.com/questions/50917379/cannot-stop-jupyter-notebook, Issue not resolved: https://github.com/jupyterhub/jupyterhub/issues/1377
+ https://stackoverflow.com/questions/50917379/cannot-stop-jupyter-notebook, 
+ 
+ Issue not resolved: https://github.com/jupyterhub/jupyterhub/issues/1377
 
 `pkill jupyter` 
 
