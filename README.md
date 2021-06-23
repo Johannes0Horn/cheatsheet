@@ -1,9 +1,11 @@
 # docker/linux
 
 **view logfile live**
+
 tail -f logfile.log
 
 **attach to docker-compose logs(contol+c to detach)**
+
 sudo docker-compose logs -f -t --tail=100
 
 **use standard kernel of env for jupyter notebook**
