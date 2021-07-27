@@ -1,3 +1,49 @@
+# git 
+
+## change master to an older commit
+
+```bash
+git checkout 307a5cd        # check out the commit that you want to reset to 
+git checkout -b fixy        # create a branch named fixy to do the work
+git merge -s ours master    # merge master's history without changing any files
+git checkout master         # switch back to master
+git merge fixy              # and merge in the fixed branch
+git push                    # done, no need to force push!
+```
+
+## how to make a fork of a public repository private
+
+First, duplicate the repo as others said (details here):
+
+Create a new repo (let's call it private-repo). Then:
+
+```bash
+git clone --bare https://github.com/exampleuser/public-repo.git
+cd public-repo.git
+git push --mirror https://github.com/yourname/private-repo.git
+cd ..
+rm -rf public-repo.git
+```
+
+Clone the private repo so you can work on it.
+
+```bash
+git clone https://github.com/yourname/private-repo.git
+cd private-repo
+make some changes
+git commit
+git push origin master
+```
+
+To pull new hotness from the public repo:
+
+```bash
+cd private-repo
+git remote add public https://github.com/exampleuser/public-repo.git
+git pull public master # Creates a merge commit
+git push origin master
+```
+
 # docker/linux
 
 **view logfile live**
