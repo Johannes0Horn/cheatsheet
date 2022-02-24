@@ -104,6 +104,10 @@ docker pull nvcr.io/nvidia/tensorflow:19.02-py3
 
 `jupyter notebook --ip 0.0.0.0 --no-browser --allow-root --port 1234`
 
+**access jupyter notebook via ssh**
+
+`ssh -N -f -L localhost:8888:localhost:8889 remote_user@remote_host`
+
 **Host machine access this url:**
 
 [localhost:1234](localhost:1234)
@@ -114,11 +118,15 @@ docker stop containername
 
 **to start a Training and detach it from console, so one can disconnect without stopping**
 
+`screen -ls` to view running sessions and their pids.
+
 `screen` to start screen session.
 
 control + a + d to detach.
 
-`screen -r` to resume
+control + a + \ to stop.
+
+`screen -r [pid]` to resume a session
 
 **view running containers**
 
