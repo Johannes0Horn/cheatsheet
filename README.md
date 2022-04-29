@@ -104,11 +104,15 @@ docker pull nvcr.io/nvidia/tensorflow:19.02-py3
 
 `source /home/venvname/bin/activate`
 
-**Run jupyter notebook Inside the Container:**
+**Run jupyter lab Inside the Container/Remote:**
+
+`jupyter lab --no-browser --port <port-number>`
+
+**Run jupyter notebook Inside the Container/Remote:**
 
 `jupyter notebook --ip 0.0.0.0 --no-browser --allow-root --port 1234`
 
-**access jupyter notebook via ssh**
+**access jupyter notebook/lab via ssh**
 
 `ssh -N -f -L localhost:8888:localhost:1234 remote_user@remote_host`
 
@@ -129,6 +133,8 @@ docker stop containername
 control + a + d to detach.
 
 control + a + \ to stop.
+
+`screen -X -S [session # you want to kill] quit`
 
 `screen -r [pid]` to resume a session
 
