@@ -46,6 +46,10 @@ git push origin master
 
 # docker/linux
 
+**check disk space**
+
+`df -h --total`
+
 **view logfile live**
 
 tail -f logfile.log
@@ -106,7 +110,7 @@ docker pull nvcr.io/nvidia/tensorflow:19.02-py3
 
 **access jupyter notebook via ssh**
 
-`ssh -N -f -L localhost:8888:localhost:8889 remote_user@remote_host`
+`ssh -N -f -L localhost:8888:localhost:1234 remote_user@remote_host`
 
 **Host machine access this url:**
 
